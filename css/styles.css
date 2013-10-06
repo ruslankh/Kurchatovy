@@ -1,0 +1,107 @@
+body {
+  font-family: 'OpenSansRegular', Arial, sans-serif;
+  margin:0;
+  padding:0;
+  background-color: #ecf0f1;
+}
+#board {
+	float: left;
+	width: 130px;
+	height: 90px;
+	background-color: #f1c40f;
+	position: fixed;
+	margin-top: 30px;
+	line-height: 0.5;
+	padding: 20px;
+	font-family: 'OpenSansSemibold', Arial, sans-serif;
+}
+#wrapper {
+  overflow: hidden;
+  width: 900px;
+  margin: 0 auto;
+}
+#content {
+	float: right;
+	width: 690px;
+	padding: 30px;
+}
+.boardtext {
+    font-size:20px;
+    color: #ffffff;
+}
+#tablepic {
+	width: 690px;
+	height: 300px;
+	margin-bottom: 20px;
+    background-image: url(table.jpg);
+}
+#evolution {
+	background-color: #E3E3E3;
+	width: 650px;
+	height: 100px;
+	padding: 20px;
+	margin-top: 10px;
+}
+.test {
+	padding: 20px;
+	float: left;
+	width:650px;
+	color: #2c3e50;
+    background-color: #ffffff;
+    margin-bottom: 15px;
+}
+.highlight {
+	border: 1px dashed #ffffff;
+	background-color: #ffffff;
+	padding: 20px;
+	float: left;
+	width:650px;
+	color: #2c3e50;
+    margin-bottom: 15px;
+}
+.picture {
+	float: left;
+	margin-right: 40px;
+}
+#test {
+	margin-top: 20px;
+	font-size: 12px;
+}
+.questionList {
+	float: left;
+	width: 330px;
+    font-family: 'OpenSansLight', Arial, sans-serif;
+}
+.cheks {
+	margin-right: 20px;
+	float: left;
+	font-size: 15px;
+	/*font-family: 'OpenSansRegular', Arial, sans-serif;*/
+}
+.onequestion {
+	margin-bottom: 30px;
+	font-size: 18px;
+	/*font-family: 'OpenSansSemibold', Arial, sans-serif;*/
+}
+.tip {
+	font-size: 10px;
+	line-height: normal;
+}
+.right {
+	color: #298A08;
+	font-size: 15px;
+	line-height: normal;
+}
+.wrong {
+	color: #DF0101;
+	font-size: 15px;
+	line-height: 0px;
+}
+.evopic {
+	height: 100px;
+	float: left;
+	margin-right: 10px;
+}
+.information {
+    margin-bottom: 20px;
+}
