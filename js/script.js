@@ -99,11 +99,13 @@ physics = 0;
 life = 0;
 
 function checking(answer, nums, numq, what) {
-    var usersInput;
+    console.log(answer, answer.value)
     $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
+    var usr = answer;
     if (isNaN(answer)) {
-        usersInput = answer.value;
+        usr = answer.value;
+        console.log(usr);
         if (answer.value.length == "") {
             //$(what).parent().parent().append("<br><span class='wrong'>Вы ничего не ввели!</span>")
             answer = "Вы ничего не ввели!"
@@ -115,7 +117,7 @@ function checking(answer, nums, numq, what) {
     }
     if (answer == correct[nums][numq]) {
 
-        $(what).parent().parent().append("<br><span class='right'>Ответ: " + usersInput + "<br>Правильно!</span>").slideDown();
+        $(what).parent().parent().append("<br><span class='right'>Ответ: " + usr + "<br>Правильно!</span>").slideDown();
         $(what).parent().parent().find(".put").fadeOut().remove();
         $("#board").animate({ backgroundColor: '#2ecc71'});
         $("#board").animate({ backgroundColor: '#f1c40f'}, 1000);
@@ -136,7 +138,7 @@ function checking(answer, nums, numq, what) {
         if(description[nums][numq] == false) {
             desciptionToWrong = ""
         }
-        $(what).parent().parent().append("<br><span class='wrong'>Ответ: " + usersInput + "<br>Неправильно!" + desciptionToWrong + "</span>")
+        $(what).parent().parent().append("<br><span class='wrong'>Ответ: " + usr + "<br>Неправильно!" + desciptionToWrong + "</span>")
         $(what).parent().parent().find(".put").fadeOut().remove();
         $(what).fadeOut().remove(".pressenter");
     }
