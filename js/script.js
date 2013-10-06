@@ -75,7 +75,7 @@ answersToHTML = function (answer, kind, a, b) {
         AnswersHTML += "<div class='cheks'><input type='radio' class='put' onclick='checking(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
     }
     else {
-        AnswersHTML += "<div><input class='put' type='text' size='40' onsubmit='checking(this" + "," + a + "," + b + ", this)'>" + "</input></div><span class='tip'>Нажмите Enter, чтобы проверить</span>"
+        AnswersHTML += "<div><input class='put' type='text' size='40' onsubmit='checking(this" + "," + a + "," + b + ", this)'>" + "</input></div><span class='pressenter'>Нажмите Enter, чтобы проверить</span>"
     }
     return AnswersHTML;
 }
@@ -100,7 +100,7 @@ life = 0;
 
 function checking(answer, nums, numq, what) {
     console.log(answer, nums, numq, what);
-    $(what).parent().parent().find(".tip").remove();
+    $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
     if (isNaN(answer)) {
         if (answer.value.length == "") {
@@ -137,7 +137,7 @@ function checking(answer, nums, numq, what) {
         }
         $(what).parent().parent().append("<br><span class='wrong'>Ответ: " + answer + "<br>Неправильно!" + desciptionToWrong + "</span>")
         $(what).parent().parent().find(".put").fadeOut().remove();
-        $(what).fadeOut().remove(".tip");
+        $(what).fadeOut().remove(".pressenter");
     }
 
 }
