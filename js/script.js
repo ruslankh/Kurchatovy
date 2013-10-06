@@ -41,13 +41,27 @@ Test.prototype.toHTML = function (highlight, a) {
     }
     var TestHTML = "";
     TestHTML += highlight ? "<div class='highlight'>" : "<div class='test'>";
-
+    var picture = "";
+    var questionsWidth = "";
     if (this.picture != false) {
-        TestHTML += "<div class='information'>" + this.information + "</div><div class='picture'><img src='" + this.picture + "'width='270'></img></div><div class='questionList'>" + questionList + "</div><br></div>";
+        picture = "<div class='picture'><img src='" + this.picture + "'width='270'></img></div>";
+    }
+    else {
+        questionsWidth = "style='width: 610px'"
+    }
+    var information = "";
+    if(this.information != false) {
+        information = "<div class='information'>" + this.information + "</div>"
+    }
+    TestHTML += picture + information + "<div class='questionList'" + questionsWidth + ">" + questionList + "</div><br></div>";
+/*
+    if (this.picture != false) {
+        TestHTML += "<div class='information'>" + this.information + "</div><div class='questionList'>" + questionList + "</div><br></div>";
     }
     else {
         TestHTML += "<div class='information'>" + this.information + "</div><div class='questionList' style='width: 610px'>" + questionList + "</div><br></div>";
     }
+    */
     return TestHTML;
 
 }

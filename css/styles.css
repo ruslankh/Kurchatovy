@@ -51,7 +51,6 @@ body {
     margin-bottom: 15px;
 }
 .highlight {
-	border: 1px dashed #ffffff;
 	background-color: #ffffff;
 	padding: 20px;
 	float: left;
@@ -103,5 +102,9 @@ body {
 	margin-right: 10px;
 }
 .information {
-    margin-bottom: 20px;
+    background-color: #f3d527;
+    padding: 20px;
+    float: left;
+    margin: -20px -20px 20px -20px;
+    width: 650px;
 }
