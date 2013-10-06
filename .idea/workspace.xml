@@ -25,12 +25,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="45" selection-start="4452" selection-end="4452" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3192">
+            <state line="137" column="87" selection-start="4285" selection-end="4285" vertical-scroll-proportion="0.5205479" vertical-offset="2535" max-vertical-offset="3192">
               <folding>
-                <marker date="1381055723292" expanded="false" signature="1488:1500" placeholder="..." />
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1381056329154" expanded="false" signature="1488:1500" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -45,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="questions.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="questions.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/questions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="307" selection-start="2355" selection-end="2355" vertical-scroll-proportion="0.7671233" vertical-offset="504" max-vertical-offset="1218">
+            <state line="48" column="307" selection-start="2355" selection-end="2355" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1218">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -74,9 +75,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/js/questions.js" />
+        <option value="$PROJECT_DIR$/js/script.js" />
       </list>
     </option>
   </component>
@@ -282,7 +283,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="139" column="45" selection-start="4452" selection-end="4452" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3192">
           <folding>
-            <marker date="1381055723292" expanded="false" signature="1488:1500" placeholder="..." />
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1381056329154" expanded="false" signature="1488:1500" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -301,20 +303,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
+    <entry file="file://$PROJECT_DIR$/js/questions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="45" selection-start="4452" selection-end="4452" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3192">
+        <state line="48" column="307" selection-start="2355" selection-end="2355" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1218">
           <folding>
-            <marker date="1381055723292" expanded="false" signature="1488:1500" placeholder="..." />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/questions.js">
+    <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="307" selection-start="2355" selection-end="2355" vertical-scroll-proportion="0.7671233" vertical-offset="504" max-vertical-offset="1218">
+        <state line="137" column="87" selection-start="4285" selection-end="4285" vertical-scroll-proportion="0.5205479" vertical-offset="2535" max-vertical-offset="3192">
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <marker date="1381056329154" expanded="false" signature="1488:1500" placeholder="..." />
           </folding>
         </state>
       </provider>

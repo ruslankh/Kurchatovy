@@ -99,7 +99,7 @@ physics = 0;
 life = 0;
 
 function checking(answer, nums, numq, what) {
-    console.log(answer, nums, numq, what);
+    var usersInput = answer.value;
     $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
     if (isNaN(answer)) {
@@ -114,7 +114,7 @@ function checking(answer, nums, numq, what) {
     }
     if (answer == correct[nums][numq]) {
 
-        $(what).parent().parent().append("<br><span class='right'>Ответ: " + answer + "<br>Правильно!</span>").slideDown();
+        $(what).parent().parent().append("<br><span class='right'>Ответ: " + usersInput + "<br>Правильно!</span>").slideDown();
         $(what).parent().parent().find(".put").fadeOut().remove();
         $("#board").animate({ backgroundColor: '#2ecc71'});
         $("#board").animate({ backgroundColor: '#f1c40f'}, 1000);
@@ -135,7 +135,7 @@ function checking(answer, nums, numq, what) {
         if(description[nums][numq] == false) {
             desciptionToWrong = ""
         }
-        $(what).parent().parent().append("<br><span class='wrong'>Ответ: " + answer + "<br>Неправильно!" + desciptionToWrong + "</span>")
+        $(what).parent().parent().append("<br><span class='wrong'>Ответ: " + usersInput + "<br>Неправильно!" + desciptionToWrong + "</span>")
         $(what).parent().parent().find(".put").fadeOut().remove();
         $(what).fadeOut().remove(".pressenter");
     }
