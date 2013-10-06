@@ -1,6 +1,3 @@
-/*  О Б Р А Б О Т К А  */
-
-//события при загрузке странице (загрузка таблицы Менделеева и рендеринг тестов)
 $(document).ready(function () {
     //$("#tablepic").backstretch("table.jpg");
     showTest();
@@ -14,13 +11,10 @@ $(document).ready(function () {
 
     });
 });
-
-//конструктор секций теста
 function Test(picture, information) {
     this.picture = picture;
     this.information = information;
 }
-//конструктор вопросов
 function Questions(question) {
     this.question = question;
 }
@@ -28,9 +22,6 @@ function Answers(answer, kind) {
     this.answer = answer;
     this.kind = kind;
 }
-
-
-// Превращение данных из объектов в HTML
 Test.prototype.toHTML = function (highlight, a) {
     questionList = "";
     k = 0;
@@ -50,24 +41,12 @@ Test.prototype.toHTML = function (highlight, a) {
         questionsWidth = "style='width: 610px'"
     }
     var information = "";
-    if(this.information != false) {
+    if (this.information != false) {
         information = "<div class='information'>" + this.information + "</div>"
     }
     TestHTML += picture + information + "<div class='questionList'" + questionsWidth + ">" + questionList + "</div><br></div>";
-/*
-    if (this.picture != false) {
-        TestHTML += "<div class='information'>" + this.information + "</div><div class='questionList'>" + questionList + "</div><br></div>";
-    }
-    else {
-        TestHTML += "<div class='information'>" + this.information + "</div><div class='questionList' style='width: 610px'>" + questionList + "</div><br></div>";
-    }
-    */
     return TestHTML;
-
 }
-
-
-// Превращение данных из объектов в HTML
 Questions.prototype.toHTML = function (w, z) {
     answerList = "";
     h = 0;
@@ -77,15 +56,11 @@ Questions.prototype.toHTML = function (w, z) {
     }
     var QuestionsHTML = "";
     QuestionsHTML += "<div class='onequestion'><strong>" + this.question + "</strong><br /><div class='answerslist'>" + answerList + "</div></div><br>";
-
     return QuestionsHTML;
-
 }
-
 answersToHTML = function (answer, kind, a, b) {
     var AnswersHTML = "";
     if (kind == "check") {
-
         AnswersHTML += "<div class='cheks'><input type='radio' class='put' onclick='checking(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
     }
     else {
@@ -93,25 +68,17 @@ answersToHTML = function (answer, kind, a, b) {
     }
     return AnswersHTML;
 }
-
-
-//Построение секций с картинками и вопросами
 function showTest() {
     testList = "";
     i = 0;
     while (i < test.length) {
         testList += test[i].toHTML(i % 2 == 0, i);
         i++
-
-
     }
     $("#test").append(testList);
-
 }
-
-physics = 0;
-life = 0;
-
+var physics = 0;
+var life = 0;
 function checking(answer, nums, numq, what) {
     $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
@@ -120,14 +87,12 @@ function checking(answer, nums, numq, what) {
         usr = answer.value;
         if (answer.value.length == "") {
             usr = "Вы ничего не ввели!"
-
         }
         else {
             answer = answer.value.toLowerCase();
         }
     }
     if (answer == correct[nums][numq]) {
-
         $(what).parent().parent().append("<br><span class='right'>Ответ: " + usr + "<br>Правильно!</span>").slideDown();
         $(what).parent().parent().find(".put").fadeOut().remove();
         $("#board").animate({ backgroundColor: '#2ecc71'});
@@ -142,18 +107,16 @@ function checking(answer, nums, numq, what) {
         }
     }
     else {
-
         $("#board").animate({ backgroundColor: '#e74c3c'});
         $("#board").animate({ backgroundColor: '#f1c40f'}, 1000);
         var desciptionToWrong = "<br>" + description[nums][numq];
-        if(description[nums][numq] == false) {
+        if (description[nums][numq] == false) {
             desciptionToWrong = ""
         }
         $(what).parent().parent().append("<br><span class='wrong'>Ответ: " + usr + "<br>Неправильно!" + desciptionToWrong + "</span>")
         $(what).parent().parent().find(".put").fadeOut().remove();
         $(what).fadeOut().remove(".pressenter");
     }
-
 }
 
 
