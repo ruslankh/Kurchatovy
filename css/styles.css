@@ -108,3 +108,9 @@ body {
     margin: -20px -20px 20px -20px;
     width: 650px;
 }
+img {
+    border: 0;
+}
+a {
+    border: 0;
+}
