@@ -99,16 +99,13 @@ physics = 0;
 life = 0;
 
 function checking(answer, nums, numq, what) {
-    console.log(answer, answer.value)
     $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
     var usr = answer;
     if (isNaN(answer)) {
         usr = answer.value;
-        console.log(usr);
         if (answer.value.length == "") {
-            //$(what).parent().parent().append("<br><span class='wrong'>Вы ничего не ввели!</span>")
-            answer = "Вы ничего не ввели!"
+            usr = "Вы ничего не ввели!"
 
         }
         else {
