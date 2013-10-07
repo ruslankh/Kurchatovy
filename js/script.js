@@ -15,7 +15,7 @@ $(document).ready(function () {
     var code = e.keyCode || e.which;
 
     $(".put").keydown(function (e) {
-        if(code == 13) { //Enter keycode
+        if (e.keyCode == 13) {
             if ($(this).is(":focus")) {
                 $(this).submit().select();
             }
