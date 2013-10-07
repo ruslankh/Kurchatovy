@@ -12,7 +12,7 @@ $(document).ready(function () {
         s.parentNode.insertBefore(wf, s);
     })();
     showTest();
-    $(".put").keydown(function (e) {
+    $(".put").keyup(function (e) {
         if (e.keyCode == 13) {
             if ($(this).is(":focus")) {
                 $(this).submit().select();
