@@ -10,6 +10,7 @@ $(document).ready(function () {
         }
 
     });
+    var IE7_PNG_SUFFIX = ".png";
 });
 function Test(picture, information) {
     this.picture = picture;
