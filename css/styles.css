@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic);
 body {
   /*font-family: 'OpenSansRegular', Arial, sans-serif;*/
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 400;
   margin:0;
   padding:0;
@@ -16,7 +16,7 @@ body {
 	margin-top: 30px;
 	line-height: 0.5;
 	padding: 20px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 600;
 	/*font-family: 'OpenSansSemibold', Arial, sans-serif;*/
 }
@@ -75,7 +75,7 @@ body {
 	float: left;
 	width: 330px;
     /*font-family: 'OpenSansLight', Arial, sans-serif;*/
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 300;
 }
 .cheks {
