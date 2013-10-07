@@ -19,7 +19,7 @@ $(document).ready(function () {
             }
             return false;
         }
-
+    });
     var IE7_PNG_SUFFIX = ".png";
 });
 function Test(picture, information) {
