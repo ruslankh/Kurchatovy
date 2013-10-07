@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    $("#wrapper").text("outdated");
+    $("#wrapper").empty().prepend('<div id="ie">Ваш браузер устарел</div>');
 });
