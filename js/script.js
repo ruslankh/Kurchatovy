@@ -12,7 +12,6 @@ $(document).ready(function () {
         s.parentNode.insertBefore(wf, s);
     })();
     showTest();
-    var code = e.keyCode || e.which;
 
     $(".put").keydown(function (e) {
         if (e.keyCode == 13) {
