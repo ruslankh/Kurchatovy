@@ -21,6 +21,15 @@ $(document).ready(function () {
         }
 
     });
+    $(".put").keydown(function (e) {
+        if (e.keyCode == 13) {
+            if ($(this).is(":focus")) {
+                $(this).submit().select();
+            }
+            return false;
+        }
+
+    });
     var IE7_PNG_SUFFIX = ".png";
 });
 function Test(picture, information) {
