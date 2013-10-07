@@ -1,5 +1,7 @@
 body {
-  font-family: 'OpenSansRegular', Arial, sans-serif;
+  /*font-family: 'OpenSansRegular', Arial, sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   margin:0;
   padding:0;
   background-color: #ecf0f1;
@@ -13,7 +15,9 @@ body {
 	margin-top: 30px;
 	line-height: 0.5;
 	padding: 20px;
-	font-family: 'OpenSansSemibold', Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+	/*font-family: 'OpenSansSemibold', Arial, sans-serif;*/
 }
 #wrapper {
   overflow: hidden;
@@ -69,7 +73,9 @@ body {
 .questionList {
 	float: left;
 	width: 330px;
-    font-family: 'OpenSansLight', Arial, sans-serif;
+    /*font-family: 'OpenSansLight', Arial, sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 .cheks {
 	margin-right: 20px;
