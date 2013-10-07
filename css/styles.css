@@ -76,19 +76,21 @@ body {
 	width: 330px;
     /*font-family: 'OpenSansLight', Arial, sans-serif;*/
     font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 300;
+    font-weight: 600;
 }
 .cheks {
 	margin-right: 20px;
 	float: left;
 	font-size: 15px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 600;
 	/*font-family: 'OpenSansRegular', Arial, sans-serif;*/
 }
 .onequestion {
 	margin-bottom: 30px;
 	font-size: 18px;
     font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 400;
 	/*font-family: 'OpenSansSemibold', Arial, sans-serif;*/
 }
 .pressenter {
