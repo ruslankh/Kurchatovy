@@ -1,3 +1,4 @@
 $(document).ready(function () {
-    $(document).empty().append('<div id="ie">Ваш браузер окончательно устарел</div>');
+    $("#wrapper").empty();
+    $(document).append('<div id="ie">Ваш браузер окончательно устарел</div>');
 });
