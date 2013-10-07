@@ -12,14 +12,14 @@ $(document).ready(function () {
         s.parentNode.insertBefore(wf, s);
     })();
     showTest();
-    $(".put").keyup(function (e) {
-        if (e.keyCode == 13) {
-            if ($(this).is(":focus")) {
-                $(this).submit().select();
-            }
-            return false;
+    var code = e.keyCode || e.which;
+
+    if(code == 13) { //Enter keycode
+        if ($(this).is(":focus")) {
+            $(this).submit().select();
         }
-    });
+        return false;
+    }
     var IE7_PNG_SUFFIX = ".png";
 });
 function Test(picture, information) {
@@ -75,7 +75,7 @@ answersToHTML = function (answer, kind, a, b) {
         AnswersHTML += "<div class='cheks'><input type='radio' class='put' onclick='checking(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
     }
     else {
-        AnswersHTML += "<div><input class='put' type='text' size='40' onsubmit='checking(this" + "," + a + "," + b + ", this)'>" + "</input></div><span class='pressenter'>Нажмите Enter, чтобы проверить</span>"
+        AnswersHTML += "<div><form><input class='put' type='text' size='40' onsubmit='checking(this" + "," + a + "," + b + ", this)'>" + "</input></form></div><span class='pressenter'>Нажмите Enter, чтобы проверить</span>"
     }
     return AnswersHTML;
 }
