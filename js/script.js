@@ -14,12 +14,14 @@ $(document).ready(function () {
     showTest();
     var code = e.keyCode || e.which;
 
-    if(code == 13) { //Enter keycode
-        if ($(this).is(":focus")) {
-            $(this).submit().select();
+    $(".put").keydown(function (e) {
+        if(code == 13) { //Enter keycode
+            if ($(this).is(":focus")) {
+                $(this).submit().select();
+            }
+            return false;
         }
-        return false;
-    }
+    });
     var IE7_PNG_SUFFIX = ".png";
 });
 function Test(picture, information) {
