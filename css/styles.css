@@ -15,7 +15,7 @@ body {
 	position: fixed;
 	margin-top: 30px;
 	/*line-height: 0.5;*/
-	padding: 20px;
+	padding: 18px;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 600;
 	/*font-family: 'OpenSansSemibold', Arial, sans-serif;*/
@@ -31,7 +31,7 @@ body {
 	padding: 30px;
 }
 .boardtext {
-    font-size:20px;
+    font-size:18px;
     color: #ffffff;
 }
 #tablepic {
