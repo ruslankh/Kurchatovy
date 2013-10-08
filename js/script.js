@@ -13,15 +13,14 @@ $(document).ready(function () {
     })();
     showTest();
 
-    $(".put").keydown(function (e) {
+/*    $(".put").keydown(function (e) {
         if (e.keyCode == 13) {
             if ($(this).is(":focus")) {
-                $(this).submit().select();
+                $(this).parent().submit().select();
             }
             return false;
         }
-    });
-    var IE7_PNG_SUFFIX = ".png";
+    });*/
 });
 function Test(picture, information) {
     this.picture = picture;
@@ -76,7 +75,7 @@ answersToHTML = function (answer, kind, a, b) {
         AnswersHTML += "<div class='cheks'><input type='radio' class='put' onclick='checking(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
     }
     else {
-        AnswersHTML += "<div><input class='put' type='text' size='40' onsubmit='checking(this" + "," + a + "," + b + ", this)'>" + "</input></div><span class='pressenter'>Нажмите Enter, чтобы проверить</span>"
+        AnswersHTML += "<div><form onsubmit='alert(this," + a + "," + b + ", this); return false;'><input class='put' type='text' size='40'><input type='submit' value='Проверить'></form><span class='pressenter'>Или нажмите Enter</span></div>"
     }
     return AnswersHTML;
 }
@@ -92,6 +91,7 @@ function showTest() {
 var physics = 0;
 var life = 0;
 function checking(answer, nums, numq, what) {
+
     $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
     var usr = answer;
@@ -129,6 +129,8 @@ function checking(answer, nums, numq, what) {
         $(what).parent().parent().find(".put").fadeOut().remove();
         $(what).fadeOut().remove(".pressenter");
     }
+    console.log(this);
+    return false;
 }
 
 
