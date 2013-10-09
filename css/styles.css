@@ -133,3 +133,6 @@ a {
     font-weight: 600;
     color: #e74c3c;
 }
+.year {
+    float: left;
+}
