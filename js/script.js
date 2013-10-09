@@ -22,6 +22,14 @@ $(document).ready(function () {
         }
     });*/
 });
+function inputToChecking(form, nums, numq, answer) {
+     var answerinp = $(form).find(".put").val();
+    var ele = $(form).find(".put");
+     console.log(answerinp);
+    checking(answerinp, nums, numq, ele);
+    return false;
+}
+
 function Test(picture, information) {
     this.picture = picture;
     this.information = information;
@@ -72,10 +80,10 @@ Questions.prototype.toHTML = function (w, z) {
 answersToHTML = function (answer, kind, a, b) {
     var AnswersHTML = "";
     if (kind == "check") {
-        AnswersHTML += "<div class='cheks'><input type='radio' class='put' onclick='checking(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
+        AnswersHTML += "<div class='cheks'><input type='radio' name='inpf' class='put' onclick='checking(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
     }
     else {
-        AnswersHTML += "<div><form onsubmit='checking(this," + a + "," + b + ", this); return false;'><input class='put' type='text' size='40'><input type='submit' value='Проверить'></form><span class='pressenter'>Или нажмите Enter</span></div>"
+        AnswersHTML += "<div><form onsubmit='inputToChecking(this," + a + "," + b + ",this);return false;'><input class='put' type='text' size='40'></form><span class='pressenter'>Нажмите Enter, чтобы проверить</span></div>"
     }
     return AnswersHTML;
 }
@@ -91,17 +99,18 @@ function showTest() {
 var physics = 0;
 var life = 0;
 function checking(answer, nums, numq, what) {
+    console.log(answer, nums, numq, what);
 
     $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
     var usr = answer;
     if (isNaN(answer)) {
-        usr = answer.value;
-        if (answer.value.length == "") {
+        usr = answer;
+        if (answer.length == "") {
             usr = "Вы ничего не ввели!"
         }
         else {
-            answer = answer.value.toLowerCase();
+            answer = answer.toLowerCase();
         }
     }
     if (answer == correct[nums][numq]) {
@@ -129,7 +138,6 @@ function checking(answer, nums, numq, what) {
         $(what).parent().parent().find(".put").fadeOut().remove();
         $(what).fadeOut().remove(".pressenter");
     }
-    console.log(this);
     return false;
 }
 
