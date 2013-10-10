@@ -96,17 +96,14 @@ body {
 }
 .pressenter {
 	font-size: 10px;
-	line-height: normal;
 }
 .right {
 	color: #298A08;
 	font-size: 15px;
-	line-height: normal;
 }
 .wrong {
 	color: #DF0101;
 	font-size: 15px;
-	line-height: 0px;
 }
 .evopic {
 	height: 100px;
