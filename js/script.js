@@ -113,7 +113,6 @@ function checking(answer, nums, numq, what) {
         }
         else {
             answer = answer.toLowerCase();
-            return false;
         }
     }
     if (answer == correct[nums][numq]) {
