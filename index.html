@@ -8,25 +8,28 @@
     <link href="css/lightbox.css" rel="stylesheet"/>
     <!--[if IE 6]>
     <style type="text/css">
-        body {
+        body
+        {
+            background: url('/n.gif') no-repeat;
             background-attachment: fixed;
-        }
+        };
         #board {
-            position:fixed; _position:absolute; top:0; _top:expression( eval(document.body.scrollTop) + 'px' );
-        }
-        *html #board {
-            position: absolute;
-            top: expression(document.getElementsByTagName( 'body' )[0].scrollTop + 200 + "px");
-            height: 90px;
+        //position: absolute;
+            top: expression(
+                    document.getElementsByTagName( 'body' )[0].scrollTop + "px"
+                );
         }
     </style>
 
+    <script type="text/javascript">
+        $("#alert").append("Браузер устарел");
+    </script>
     <![endif]-->
 
 
 </head>
 <body>
-
+<div id="alert"></div>
 <div id="wrapper">
     <div id="board"><span class="boardtext" style="color:#696969;">Баллы</span>
 
