@@ -23,9 +23,10 @@ $(document).ready(function () {
     });*/
 });
 function inputToChecking(form, nums, numq, answer) {
-    return false;
+
      var answerinp = $(form).find(".put").val();
     var ele = $(form).find(".put");
+    return false;
     checking(answerinp, nums, numq, ele);
     return false;
 }
