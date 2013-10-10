@@ -83,7 +83,7 @@ answersToHTML = function (answer, kind, a, b) {
         AnswersHTML += "<div class='cheks'><input type='radio' name='inpf' class='put' onclick='checking(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
     }
     else {
-        AnswersHTML += "<div><form onsubmit='inputToChecking(this," + a + "," + b + ",this);return false;'><input class='put' type='text' size='40'></form><span class='pressenter'>Нажмите Enter, чтобы проверить</span></div>"
+        AnswersHTML += "<div><form onsubmit='return inputToChecking(this," + a + "," + b + ",this);return false;'><input class='put' type='text' size='40'></form><span class='pressenter'>Нажмите Enter, чтобы проверить</span></div>"
     }
     return AnswersHTML;
 }
