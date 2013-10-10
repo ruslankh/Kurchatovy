@@ -103,6 +103,7 @@ function showTest() {
 var physics = 0;
 var life = 0;
 function checking(answer, nums, numq, what) {
+    return false;
     console.log(answer, nums, numq, what);
     if (e.preventDefault) {
         e.preventDefault();
