@@ -103,15 +103,17 @@ function checking(answer, nums, numq, what) {
 
     $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
-    return false;
+
     var usr = answer;
     if (isNaN(answer)) {
         usr = answer;
         if (answer.length == "") {
             usr = "Вы ничего не ввели!"
+            return false;
         }
         else {
             answer = answer.toLowerCase();
+            return false;
         }
     }
     if (answer == correct[nums][numq]) {
