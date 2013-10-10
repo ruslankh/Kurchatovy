@@ -17,6 +17,8 @@ body {
 	padding: 18px;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 600;
+    top: expression(document.getElementsByTagName("body")[0].scrollTop + "px"
+);
 	/*font-family: 'OpenSansSemibold', Arial, sans-serif;*/
 }
 #wrapper {
