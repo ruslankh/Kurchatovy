@@ -26,7 +26,7 @@ function inputToChecking(form, nums, numq, answer) {
 
      var answerinp = $(form).find(".put").val();
     var ele = $(form).find(".put");
-    return false;
+
     checking(answerinp, nums, numq, ele);
     return false;
 }
@@ -100,14 +100,10 @@ function showTest() {
 var physics = 0;
 var life = 0;
 function checking(answer, nums, numq, what) {
-    console.log(answer, nums, numq, what);
-    if (e.preventDefault) {
-        e.preventDefault();
-    }
-    e.returnValue = false; // for IE
 
     $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
+    return false;
     var usr = answer;
     if (isNaN(answer)) {
         usr = answer;
