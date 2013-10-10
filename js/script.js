@@ -23,6 +23,10 @@ $(document).ready(function () {
     });*/
 });
 function inputToChecking(form, nums, numq, answer) {
+    if (e.preventDefault) {
+        e.preventDefault();
+    }
+    e.returnValue = false; // for IE
      var answerinp = $(form).find(".put").val();
     var ele = $(form).find(".put");
      console.log(answerinp);
@@ -100,6 +104,10 @@ var physics = 0;
 var life = 0;
 function checking(answer, nums, numq, what) {
     console.log(answer, nums, numq, what);
+    if (e.preventDefault) {
+        e.preventDefault();
+    }
+    e.returnValue = false; // for IE
 
     $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
