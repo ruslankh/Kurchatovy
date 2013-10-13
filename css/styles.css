@@ -141,6 +141,12 @@ a {
     position: fixed;
     width: 130px;
 }
+#alert {
+    background-color: #DF0101;
+    color: #E3E3E3;
+    font-size: 15px;
+    width: 100%;
+}
 #tablelink {
     font-size: 13px;
     float: left;
