@@ -13,7 +13,7 @@
             background: url('/n.gif') no-repeat;
             background-attachment: fixed;
         };
-        #board {
+        #leftbar {
         //position: absolute;
             top: expression(
                     document.getElementsByTagName( 'body' )[0].scrollTop + "px"
@@ -31,12 +31,14 @@
 <body>
 <div id="alert"></div>
 <div id="wrapper">
+    <div id="leftbar">
     <div id="board"><span class="boardtext" style="color:#696969;">Баллы</span>
 
         <br><span class="boardtext">по физике:&nbsp;<span class="boardtext" id="presult">0</span></span>
 
-        <br><span class="boardtext">по жизни:&nbsp;<span class="boardtext" id="lresult">0</span><br><br><br><span style="font-size: 13px"><a href="http://khromushin.com/img/sistema-mendeleeva.pdf" target="_blank">Показать таблицу Менделеева<img src="newtab.png" height="10px"></a> </span></div>
-    <div id="content">
+        <br><span class="boardtext">по жизни:&nbsp;<span class="boardtext" id="lresult">0</span></div><br><span id="tablelink"><a href="http://khromushin.com/img/sistema-mendeleeva.pdf" target="_blank">Показать таблицу Менделеева<img src="newtab.png" height="10px"></a> </span><span id="alert"></span>
+    </div>
+        <div id="content">
         <div id="tablepic"></div>
         <div id="evolution">Эволюция периодической таблицы Менделеева<br>
             <div class="evopic" style="width: 81px;"><a data-lightbox="evo" href="table1.png" title="1869"><img src="table1.png" class="evopic"></img></a><br><span class="year">1869 г.</span>

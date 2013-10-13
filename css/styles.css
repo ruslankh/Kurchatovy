@@ -11,7 +11,6 @@ body {
 	width: 130px;
 	height: 90px;
 	background-color: #f3d527;
-	position: fixed;
 	margin-top: 30px;
 	/*line-height: 0.5;*/
 	padding: 18px;
@@ -136,4 +135,20 @@ a {
 }
 .year {
     float: left;
+}
+#leftbar {
+    float: left;
+    position: fixed;
+    width: 130px;
+}
+#tablelink {
+    font-size: 13px;
+    float: left;
+    width: 130px;
+    margin-top: 10px;
+    padding: 18px;
+    /*line-height: 0.5;*/
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 400;
+    top: expression(document.getElementsByTagName("body")[0].scrollTop + "px";
 }
