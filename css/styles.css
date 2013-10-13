@@ -143,9 +143,10 @@ a {
 }
 #alert {
     background-color: #DF0101;
-    color: #E3E3E3;
+    color: #ffffff;
     font-size: 15px;
     width: 100%;
+    padding: 30px;
 }
 #tablelink {
     font-size: 13px;
