@@ -2,7 +2,7 @@ $(document).ready(function () {
     WebFontConfig = {
         google: { families: [ 'Open+Sans:400,300,600:latin,cyrillic' ] }
     };
-    (function() {
+    (function () {
         var wf = document.createElement('script');
         wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
             '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
@@ -13,18 +13,18 @@ $(document).ready(function () {
     })();
     showTest();
 
-/*    $(".put").keydown(function (e) {
-        if (e.keyCode == 13) {
-            if ($(this).is(":focus")) {
-                $(this).parent().submit().select();
-            }
-            return false;
-        }
-    });*/
+    /*    $(".put").keydown(function (e) {
+     if (e.keyCode == 13) {
+     if ($(this).is(":focus")) {
+     $(this).parent().submit().select();
+     }
+     return false;
+     }
+     });*/
 });
 function inputToChecking(form, nums, numq, answer) {
 
-     var answerinp = $(form).find(".put").val();
+    var answerinp = $(form).find(".put").val();
     var ele = $(form).find(".put");
 
     checking(answerinp, nums, numq, ele);
@@ -101,7 +101,7 @@ var physics = 0;
 var life = 0;
 function checking(answer, nums, numq, what) {
 
-    $(what).parent().parent().find(".pressenter").remove();
+    $(what).parent().parent().find(".pressenter").fadeOut();
     $(what).parent().parent().find("br").remove();
 
     var usr = answer;
@@ -117,7 +117,7 @@ function checking(answer, nums, numq, what) {
     }
     if (answer == correct[nums][numq]) {
         $(what).parent().parent().append("<br><span class='right'>Ответ: " + usr + "<br>Правильно!</span>").slideDown();
-        $(what).parent().parent().find(".put").fadeOut().remove();
+        $(what).parent().parent().find(".put").fadeOut();
         $("#board").animate({ backgroundColor: '#2ecc71'});
         $("#board").animate({ backgroundColor: '#f1c40f'}, 1000);
         if (isPhysics[nums][numq]) {
@@ -137,8 +137,8 @@ function checking(answer, nums, numq, what) {
             desciptionToWrong = ""
         }
         $(what).parent().parent().append("<br><span class='wrong'>Ответ: " + usr + "<br>Неправильно!" + desciptionToWrong + "</span>")
-        $(what).parent().parent().find(".put").fadeOut().remove();
-        $(what).fadeOut().remove(".pressenter");
+        $(what).parent().parent().find(".put").fadeOut();
+        $(what).fadeOut(".pressenter");
     }
     return false;
 }

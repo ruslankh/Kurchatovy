@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="js/jquery-1.9.1.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link href="css/lightbox.css" rel="stylesheet"/>
     <!--[if IE 6]>
     <script src="ie.js"></script>
     <style type="text/css">
-        body
-        {
+        body {
             background: url('/n.gif') no-repeat;
             background-attachment: fixed;
-        };
+        }
+
+        ;
         #leftbar {
-        //position: absolute;
+        / / position : absolute;
             top: expression(
                     document.getElementsByTagName( 'body' )[0].scrollTop + "px"
                 );
@@ -30,31 +30,39 @@
 <div id="wrapper">
 
     <div id="leftbar">
-    <div id="board"><span class="boardtext" style="color:#696969;">Баллы</span>
+        <div id="board"><span class="boardtext" style="color:#696969;">Баллы</span>
 
-        <br><span class="boardtext">по физике:&nbsp;<span class="boardtext" id="presult">0</span></span>
+            <br><span class="boardtext">по физике:&nbsp;<span class="boardtext" id="presult">0</span></span>
 
-        <br><span class="boardtext">по жизни:&nbsp;<span class="boardtext" id="lresult">0</span></div><br><span id="tablelink"><a href="http://khromushin.com/img/sistema-mendeleeva.pdf" target="_blank">Показать таблицу Менделеева&nbsp;<img src="newtab.png" height="10px"></a> </span>
+            <br><span class="boardtext">по жизни:&nbsp;<span class="boardtext" id="lresult">0</span></div>
+        <br><span id="tablelink"><a href="http://khromushin.com/img/sistema-mendeleeva.pdf" target="_blank">Показать
+        таблицу Менделеева&nbsp;<img src="newtab.png" height="10px"></a> </span>
     </div>
-        <div id="content">
+    <div id="content">
         <div id="tablepic"></div>
         <div id="evolution">Эволюция периодической таблицы Менделеева<br>
-            <div class="evopic" style="width: 81px;"><a data-lightbox="evo" href="table1.png" title="1869"><img src="table1.png" class="evopic"></img></a><br><span class="year">1869 г.</span>
+
+            <div class="evopic" style="width: 81px;"><a data-lightbox="evo" href="table1.png" title="1869"><img
+                    src="table1.png" class="evopic"></img></a><br><span class="year">1869 г.</span>
             </div>
-            <div class="evopic" style="width: 204px;"><a data-lightbox="evo" href="table2.jpg" title="1871"><img src="table2.jpg" class="evopic"></img></a><br><span class="year">1871 г.</span>
+            <div class="evopic" style="width: 204px;"><a data-lightbox="evo" href="table2.jpg" title="1871"><img
+                    src="table2.jpg" class="evopic"></img></a><br><span class="year">1871 г.</span>
             </div>
-            <div class="evopic" style="width: 72px;"><a data-lightbox="evo" href="table3.png" title="1906"><img src="table3.png" class="evopic"></img></a><br><span class="year">1906 г.</span>
+            <div class="evopic" style="width: 72px;"><a data-lightbox="evo" href="table3.png" title="1906"><img
+                    src="table3.png" class="evopic"></img></a><br><span class="year">1906 г.</span>
             </div>
-            <div class="evopic" style="width: 106px;"><a data-lightbox="evo" href="table4.jpg" title="Источник: http://khromushin.com/"><img src="table4.min.png" class="evopic"></img></a><br><span class="year">Настоящее время</span>
+            <div class="evopic" style="width: 106px;"><a data-lightbox="evo" href="table4.jpg"
+                                                         title="Источник: http://khromushin.com/"><img
+                    src="table4.min.png" class="evopic"></img></a><br><span class="year">Настоящее время</span>
             </div>
         </div>
         <div id="test"></div>
     </div>
 </div>
+<script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/lightbox-2.6.min.js"></script>
 <script src="js/questions.js"></script>
 <script src="js/jquery.color.js"></script>
-
 </body>
 </html>
