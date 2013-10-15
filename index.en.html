@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="css/lightbox.css" rel="stylesheet"/>
+    <!--[if IE 6]>
+    <script src="ie.js"></script>
+    <style type="text/css">
+        body {
+            background: url('/n.gif') no-repeat;
+            background-attachment: fixed;
+        }
+
+        ;
+        #leftbar {
+        / / position : absolute;
+            top: expression(
+                    document.getElementsByTagName( 'body' )[0].scrollTop + "px"
+                );
+        }
+    </style>
+    <![endif]-->
+
+
+</head>
+<body>
+<div id="alert"></div>
+<div id="wrapper">
+
+    <div id="leftbar">
+        <div id="board"><span class="boardtext" style="color:#696969;">Score</span>
+
+            <br><span class="boardtext">Physics:&nbsp;<span class="boardtext" id="presult">0</span></span>
+
+            <br><span class="boardtext">Life:&nbsp;<span class="boardtext" id="lresult">0</span></div>
+        <br><span id="tablelink"><a href="http://www.ptable.com/" target="_blank">Show periodic table&nbsp;<img src="newtab.png" height="10px"></a> </span>
+        <span id="lang"><a href="index.html">Русский</a>| English
+        </span>
+    </div>
+    <div id="content">
+        <div id="tablepic"></div>
+        <div id="evolution">The evolution of the periodic table.<br>
+
+            <div class="evopic" style="width: 81px;"><a data-lightbox="evo" href="table1.png" title="1869"><img
+                    src="table1.png" class="evopic"></img></a><br><span class="year">1869</span>
+            </div>
+            <div class="evopic" style="width: 204px;"><a data-lightbox="evo" href="table2.jpg" title="1871"><img
+                    src="table2.jpg" class="evopic"></img></a><br><span class="year">1871</span>
+            </div>
+            <div class="evopic" style="width: 72px;"><a data-lightbox="evo" href="table3.png" title="1906"><img
+                    src="table3.png" class="evopic"></img></a><br><span class="year">1906</span>
+            </div>
+            <div class="evopic" style="width: 106px;"><a data-lightbox="evo" href="Periodic_table_large.png"
+                                                         ><img
+                    src="periodictable.min.png" class="evopic"></img></a><br><span class="year">Now</span>
+            </div>
+        </div>
+        <div id="test"></div>
+    </div>
+</div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/script.en.js"></script>
+<script src="js/lightbox-2.6.min.js"></script>
+<script src="js/questions.en.js"></script>
+<script src="js/jquery.color.js"></script>
+</body>
+</html>

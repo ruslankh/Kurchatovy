@@ -84,7 +84,7 @@ answersToHTML = function (answer, kind, a, b) {
         AnswersHTML += "<div class='cheks'><input type='radio' name='inpf' class='put' onclick='checking(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
     }
     else {
-        AnswersHTML += "<div><form onsubmit='return inputToChecking(this," + a + "," + b + ",this);return false;'><input class='put' type='text' size='40'></form><span class='pressenter'>Нажмите Enter, чтобы проверить</span></div>"
+        AnswersHTML += "<div><form onsubmit='return inputToChecking(this," + a + "," + b + ",this);return false;'><input class='put' type='text' size='40'></form><span class='pressenter'>Press Enter to check your answer</span></div>"
     }
     return AnswersHTML;
 }
@@ -108,7 +108,7 @@ function checking(answer, nums, numq, what) {
     if (isNaN(answer)) {
         usr = answer;
         if (answer.length == "") {
-            usr = "Вы ничего не ввели!";
+            usr = "Вы ничего не ввели!"
             return false;
         }
         else {
@@ -116,7 +116,7 @@ function checking(answer, nums, numq, what) {
         }
     }
     if (answer == correct[nums][numq]) {
-        $(what).parent().parent().append("<br><span class='right'>Ответ: " + usr + "<br>Правильно!</span>").slideDown();
+        $(what).parent().parent().append("<br><span class='right'>Your answer: " + usr + "<br>Correct!</span>").slideDown();
         $(what).parent().parent().find(".put").fadeOut();
         $("#board").animate({ backgroundColor: '#2ecc71'});
         $("#board").animate({ backgroundColor: '#f1c40f'}, 1000);
@@ -136,7 +136,7 @@ function checking(answer, nums, numq, what) {
         if (description[nums][numq] == false) {
             desciptionToWrong = ""
         }
-        $(what).parent().parent().append("<br><span class='wrong'>Ответ: " + usr + "<br>Неправильно!" + desciptionToWrong + "</span>")
+        $(what).parent().parent().append("<br><span class='wrong'>Your answer: " + usr + "<br>Incorrect!" + desciptionToWrong + "</span>")
         $(what).parent().parent().find(".put").fadeOut();
         $(what).fadeOut(".pressenter");
     }
