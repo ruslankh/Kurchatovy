@@ -44,7 +44,7 @@ var isPhysics = [
 ];
 
 var test = [ new Test("img1.jpg", false),
-    new Test(false, "In the labs of nuclear reactions of Nuclear Research Institute in Dubna in 1967-1970, amertsy was irradiated by accelerated to an energy of 123 MeV neon ions.<br><br><img src='2i1.png'><img src='someneu.eng.png'><br><br> Russian physicists have proposed to call the new element nielsbohrium in honor of Niels Bohr. At the Lawrence Radiation Laboratory in Berkeley, atoms of californium are bombarded by nitrogen nuclei:<br><br> <img src='2i2.png'><img src='someneu.eng.png'><br><br>They proposed to call the new element Ghanium, in honor of Otto Ghan."),
+    new Test(false, "In the labs of nuclear reactions of Nuclear Research Institute in Dubna in 1967-1970, Americium was irradiated by accelerated to an energy of 123 MeV neon ions.<br><br><img src='2i1.png'><img src='someneu.eng.png'><br><br> Russian physicists have proposed to call the new element nielsbohrium in honor of Niels Bohr. At the Lawrence Radiation Laboratory in Berkeley, atoms of californium are bombarded by nitrogen nuclei:<br><br> <img src='2i2.png'><img src='someneu.eng.png'><br><br>They proposed to call the new element Ghanium, in honor of Otto Ghan."),
     new Test(false, "This reaction was observed during irradiation of aluminum with alpha particles in a cyclotron in 1937:<br><br><img src='3i.png'>")
 ];
 
