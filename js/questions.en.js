@@ -5,7 +5,7 @@ var questions = [
 
     [ new Questions("2.1 What is the atomic number of the element discovered in Dubna?"),
         new Questions("2.2 How many protons in the nucleus of the element discovered in Berkeley?"),
-        new Questions("2.3 What is the name of this element has approved by International Union of Pure and Applied Chemistry (IUPAC) in 1997?")],
+        new Questions("2.3 What name was approved by International Union of Pure and Applied Chemistry (IUPAC) for this item?")],
     [ new Questions("3.1 Which element is formed in this reaction?"),
         new Questions("3.2 What is the mass number of the obtained isotope?"),
         new Questions("3.3 The experiment showed that this isotope is radioactive and emits positrons. In the image you can see how many positrons registered by electroscope per second. Using the results of the experiment appreciate a half-life of this isotope in seconds.<br><img src='3dot3.jpg' width='250px'>")]
