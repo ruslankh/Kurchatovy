@@ -39,7 +39,6 @@ Test.prototype.toHTML = function (highlight, a) {
     while (k < questions[a].length) {
         questionList += questions[a][k].toHTML(a, k);
         k++;
-        //console.log(i, x, testList, questionList);
     }
     var TestHTML = "";
     TestHTML += highlight ? "<div class='highlight'>" : "<div class='test'>";

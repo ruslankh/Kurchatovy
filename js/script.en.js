@@ -21,7 +21,6 @@ function inputToChecking(form, nums, numq, answer) {
     checking(answerinp, nums, numq, ele);
     return false;
 }
-
 function Test(picture, information) {
     this.picture = picture;
     this.information = information;
@@ -39,7 +38,6 @@ Test.prototype.toHTML = function (highlight, a) {
     while (k < questions[a].length) {
         questionList += questions[a][k].toHTML(a, k);
         k++;
-        //console.log(i, x, testList, questionList);
     }
     var TestHTML = "";
     TestHTML += highlight ? "<div class='highlight'>" : "<div class='test'>";
@@ -133,6 +131,3 @@ function checking(answer, nums, numq, what) {
     }
     return false;
 }
-
-
-
