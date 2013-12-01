@@ -71,10 +71,10 @@ Questions.prototype.toHTML = function (w, z) {
 answersToHTML = function (answer, kind, a, b) {
     var AnswersHTML = "";
     if (kind == "check") {
-        AnswersHTML += "<div class='cheks'><input type='radio' name='inpf' class='put' onclick='checking(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
+        AnswersHTML += "<div class='cheks'><input type='radio' name='inpf' class='put' onclick='Check.radioInput(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
     }
     else {
-        AnswersHTML += "<div><form onsubmit='return inputToChecking(this," + a + "," + b + ",this);return false;'><input class='put' type='text' size='40'></form><span class='pressenter'>Нажмите Enter, чтобы проверить</span></div>"
+        AnswersHTML += "<div><form onsubmit='return Check.textInput(this," + a + "," + b + ",this);return false;'><input class='put' type='text' size='40'></form><span class='pressenter'>Нажмите Enter, чтобы проверить</span></div>"
     }
     return AnswersHTML;
 }
@@ -87,51 +87,69 @@ function showTest() {
     }
     $("#test").append(testList);
 }
-var physics = 0;
-var life = 0;
-function checking(answer, nums, numq, what) {
 
-    $(what).parent().parent().find(".pressenter").fadeOut();
+var Check = new Object();
+Check.physics = 0;
+Check.life = 0;
+Check.removeStuff = function(what) {
+        $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
-
-    var usr = answer;
-    if (isNaN(answer)) {
-        usr = answer;
-        if (answer.length == "") {
-            usr = "Вы ничего не ввели!";
-            return false;
-        }
-        else {
-            answer = answer.toLowerCase();
-        }
-    }
+    $(what).parent().parent().find(".put").fadeOut();
+};
+Check.radioInput = function(answer, nums, numq, ele) {
+    Check.removeStuff(ele);
+    var isCorrect = false;
     if (answer == correct[nums][numq]) {
-        $(what).parent().parent().append("<br><span class='right'>Ответ: " + usr + "<br>Правильно!</span>").slideDown();
-        $(what).parent().parent().find(".put").fadeOut();
-        $("#board").animate({ backgroundColor: '#2ecc71'});
-        $("#board").animate({ backgroundColor: '#f1c40f'}, 1000);
-        if (isPhysics[nums][numq]) {
-            physics++;
-            $("#presult").text(physics);
+        Check.finalSteps(ele, answer, true, nums, numq);
+    }
+    else {
+        Check.finalSteps(ele, answer, false, nums, numq);
+    }
+}
+Check.textInput = function(form, nums, numq, answer) {
+        Check.removeStuff(form);
+        var answerinp = $(form).find(".put").val();
+        var ele = $(form).find(".put");
+        if (answerinp.length == "") {
+            answerinp = "Вы ничего не ввели!";
+        }
+        var isCorrect = false;
+        for (i=0; i<=correct[nums][numq].length; i++) {
+            if(answerinp.toLowerCase() == correct[nums][numq][i]) {
+                isCorrect = true;
+            }
+        }
+        if (isCorrect) {
+            Check.finalSteps(ele, answerinp, true, nums, numq);
         }
         else {
-            life++;
-            $("#lresult").text(life);
+            Check.finalSteps(ele, answerinp, false, nums, numq);
+        }
+    return false;
+};
+Check.finalSteps = function(ele, answer, isRight, nums, numq) {
+    rightOrWrong = '';
+    rightOrWrongNotification = '';
+    boardColor = '';
+    if (isRight) {
+        rightOrWrong = 'right';
+        rightOrWrongNotification = 'Правильно!';
+        boardColor = '#2ecc71';
+        if (isPhysics[nums][numq]) {
+            Check.physics++;
+            $("#presult").text(Check.physics);
+        }
+        else {
+            Check.life++;
+            $("#lresult").text(Check.life);
         }
     }
     else {
-        $("#board").animate({ backgroundColor: '#e74c3c'});
-        $("#board").animate({ backgroundColor: '#f1c40f'}, 1000);
-        var desciptionToWrong = "<br>" + description[nums][numq];
-        if (description[nums][numq] == false) {
-            desciptionToWrong = ""
-        }
-        $(what).parent().parent().append("<br><span class='wrong'>Ответ: " + usr + "<br>Неправильно!" + desciptionToWrong + "</span>")
-        $(what).parent().parent().find(".put").fadeOut();
-        $(what).fadeOut(".pressenter");
+        rightOrWrong = 'wrong';
+        rightOrWrongNotification = 'Неправильно!'
+        boardColor = '#e74c3c'
     }
-    return false;
+    $(ele).parent().parent().append("<br><span class='" + rightOrWrong + "'>Ответ: " + answer + "<br>" + rightOrWrongNotification + "</span>").slideDown();
+    $("#board").animate({ backgroundColor: boardColor});
+    $("#board").animate({ backgroundColor: '#f1c40f'}, 1000);
 }
-
-
-
