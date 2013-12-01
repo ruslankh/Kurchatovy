@@ -45,7 +45,7 @@ Test.prototype.toHTML = function (highlight, a) {
     var picture = "";
     var questionsWidth = "";
     if (this.picture != false) {
-        picture = "<div class='picture'><img src='" + this.picture + "'width='270'></img></div>";
+        picture = "<div class='picture'><img src='img/" + this.picture + "'width='270'></img></div>";
     }
     else {
         questionsWidth = "style='width: 610px'"
