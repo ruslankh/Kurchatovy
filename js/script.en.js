@@ -21,6 +21,7 @@ function inputToChecking(form, nums, numq, answer) {
     checking(answerinp, nums, numq, ele);
     return false;
 }
+
 function Test(picture, information) {
     this.picture = picture;
     this.information = information;
@@ -70,10 +71,10 @@ Questions.prototype.toHTML = function (w, z) {
 answersToHTML = function (answer, kind, a, b) {
     var AnswersHTML = "";
     if (kind == "check") {
-        AnswersHTML += "<div class='cheks'><input type='radio' name='inpf' class='put' onclick='checking(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
+        AnswersHTML += "<div class='cheks'><input type='radio' name='inpf' class='put' onclick='Check.radioInput(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
     }
     else {
-        AnswersHTML += "<div><form onsubmit='return inputToChecking(this," + a + "," + b + ",this);return false;'><input class='put' type='text' size='40'></form><span class='pressenter'>Press Enter to check your answer</span></div>"
+        AnswersHTML += "<div><form onsubmit='return Check.textInput(this," + a + "," + b + ",this);return false;'><input class='put' type='text' size='40'></form><span class='pressenter'>Нажмите Enter, чтобы проверить</span></div>"
     }
     return AnswersHTML;
 }
