@@ -26,9 +26,9 @@ var answers = [
 
 
 var correct = [
-    ["104", "0", "rutherfordium"],
-    ["105", "105", "dubnium"],
-    ["phosphorus", "30", "150"]
+    ["104", "0", ["rutherfordium", 'rf']],
+    ["105", "105", ["dubnium", 'db']],
+    [["phosphorus", 'p'], "30", "150"]
 ];
 
 var description = [
