@@ -13,15 +13,6 @@ $(document).ready(function () {
     })();
     showTest();
 });
-function inputToChecking(form, nums, numq, answer) {
-
-    var answerinp = $(form).find(".put").val();
-    var ele = $(form).find(".put");
-
-    checking(answerinp, nums, numq, ele);
-    return false;
-}
-
 function Test(picture, information) {
     this.picture = picture;
     this.information = information;
@@ -93,7 +84,7 @@ Check.life = 0;
 Check.removeStuff = function(what) {
         $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
-    $(what).parent().parent().find(".put").remove();
+    $(what).parent().parent().find(".put").fadeOut();
 };
 Check.radioInput = function(answer, nums, numq, ele) {
     Check.removeStuff(ele);
@@ -108,9 +99,12 @@ Check.radioInput = function(answer, nums, numq, ele) {
 Check.textInput = function(form, nums, numq, answer) {
         Check.removeStuff(form);
         var answerinp = $(form).find(".put").val();
+        console.log(answerinp);
         var ele = $(form).find(".put");
-        if (answerinp.length == "") {
+        if (answerinp === "") {
             answerinp = "You left the field blank!";
+            Check.finalSteps(ele, answerinp, false, nums, numq);
+            return false;
         }
         var isCorrect = false;
         for (i=0; i<=correct[nums][numq].length; i++) {
@@ -148,7 +142,7 @@ Check.finalSteps = function(ele, answer, isRight, nums, numq) {
         rightOrWrongNotification = 'Incorrect!'
         boardColor = '#e74c3c'
     }
-    $(ele).parent().parent().append("<br><span class='" + rightOrWrong + "'>Ответ: " + answer + "<br>" + rightOrWrongNotification + "</span>").slideDown();
+    $(ele).parent().parent().append("<br><span class='" + rightOrWrong + "'>Your answer: " + answer + "<br>" + rightOrWrongNotification + "</span>").slideDown();
     $("#board").animate({ backgroundColor: boardColor});
     $("#board").animate({ backgroundColor: '#f1c40f'}, 1000);
 }

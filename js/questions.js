@@ -21,7 +21,7 @@ var answers = [
         new Answers([""], "input")],
     [new Answers([""], "input"),
         new Answers(["29", "30", "31"], "check"),
-        new Answers(["200", "400", "800"], "check")]
+        new Answers(["150", "600", "1200"], "check")]
 ];
 
 

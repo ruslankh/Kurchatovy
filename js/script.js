@@ -13,14 +13,6 @@ $(document).ready(function () {
     })();
     showTest();
 });
-function inputToChecking(form, nums, numq, answer) {
-
-    var answerinp = $(form).find(".put").val();
-    var ele = $(form).find(".put");
-
-    checking(answerinp, nums, numq, ele);
-    return false;
-}
 
 function Test(picture, information) {
     this.picture = picture;
@@ -92,7 +84,7 @@ var Check = new Object();
 Check.physics = 0;
 Check.life = 0;
 Check.removeStuff = function(what) {
-        $(what).parent().parent().find(".pressenter").remove();
+    $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
     $(what).parent().parent().find(".put").fadeOut();
 };
@@ -110,8 +102,10 @@ Check.textInput = function(form, nums, numq, answer) {
         Check.removeStuff(form);
         var answerinp = $(form).find(".put").val();
         var ele = $(form).find(".put");
-        if (answerinp.length == "") {
+        if (answerinp === "") {
             answerinp = "Вы ничего не ввели!";
+            Check.finalSteps(ele, answerinp, false, nums, numq);
+            return false;
         }
         var isCorrect = false;
         for (i=0; i<=correct[nums][numq].length; i++) {
