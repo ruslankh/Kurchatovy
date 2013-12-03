@@ -119,12 +119,16 @@ Check.textInput = function(form, nums, numq, answer) {
         else {
             Check.finalSteps(ele, answerinp, false, nums, numq);
         }
+        if (answerinp.match(/резерфорд/)) {
+            condole.log('true')
+        }
     return false;
 };
 Check.finalSteps = function(ele, answer, isRight, nums, numq) {
-    rightOrWrong = '';
-    rightOrWrongNotification = '';
-    boardColor = '';
+    var rightOrWrong = '';
+    var rightOrWrongNotification = '';
+    var boardColor = '';
+    var whyWrong = '';
     if (isRight) {
         rightOrWrong = 'right';
         rightOrWrongNotification = 'Правильно!';
@@ -140,10 +144,13 @@ Check.finalSteps = function(ele, answer, isRight, nums, numq) {
     }
     else {
         rightOrWrong = 'wrong';
-        rightOrWrongNotification = 'Неправильно!'
-        boardColor = '#e74c3c'
+        rightOrWrongNotification = 'Неправильно!';
+        boardColor = '#e74c3c';
+        if (description[nums][numq] != false)  {
+            whyWrong = "<br>" + description[nums][numq];
+        }   
     }
-    $(ele).parent().parent().append("<br><span class='" + rightOrWrong + "'>Ответ: " + answer + "<br>" + rightOrWrongNotification + "</span>").slideDown();
+    $(ele).parent().parent().append("<br><span class='" + rightOrWrong + "'>Ответ: " + answer + "<br>" + rightOrWrongNotification + whyWrong + "</span>").slideDown();
     $("#board").animate({ backgroundColor: boardColor});
     $("#board").animate({ backgroundColor: '#f1c40f'}, 1000);
 }

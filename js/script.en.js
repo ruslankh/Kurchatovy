@@ -65,7 +65,7 @@ answersToHTML = function (answer, kind, a, b) {
         AnswersHTML += "<div class='cheks'><input type='radio' name='inpf' class='put' onclick='Check.radioInput(" + answer + "," + a + "," + b + ", this)'>" + answer + "</input></div>";
     }
     else {
-        AnswersHTML += "<div><form onsubmit='return Check.textInput(this," + a + "," + b + ",this);return false;'><input class='put' type='text' size='40'></form><span class='pressenter'>Нажмите Enter, чтобы проверить</span></div>"
+        AnswersHTML += "<div><form onsubmit='return Check.textInput(this," + a + "," + b + ",this);return false;'><input class='put' type='text' size='40'></form><span class='pressenter'>Press Enter to check your answer</span></div>"
     }
     return AnswersHTML;
 }
@@ -121,9 +121,10 @@ Check.textInput = function(form, nums, numq, answer) {
     return false;
 };
 Check.finalSteps = function(ele, answer, isRight, nums, numq) {
-    rightOrWrong = '';
-    rightOrWrongNotification = '';
-    boardColor = '';
+    var rightOrWrong = '';
+    var rightOrWrongNotification = '';
+    var boardColor = '';
+    var whyWrong = '';
     if (isRight) {
         rightOrWrong = 'right';
         rightOrWrongNotification = 'Correct!';
@@ -139,10 +140,13 @@ Check.finalSteps = function(ele, answer, isRight, nums, numq) {
     }
     else {
         rightOrWrong = 'wrong';
-        rightOrWrongNotification = 'Incorrect!'
-        boardColor = '#e74c3c'
+        rightOrWrongNotification = 'Incorrect!';
+        boardColor = '#e74c3c';
+        if (description[nums][numq] != false)  {
+            whyWrong = "<br>" + description[nums][numq];
+        }
     }
-    $(ele).parent().parent().append("<br><span class='" + rightOrWrong + "'>Your answer: " + answer + "<br>" + rightOrWrongNotification + "</span>").slideDown();
+    $(ele).parent().parent().append("<br><span class='" + rightOrWrong + "'>Your answer: " + answer + "<br>" + rightOrWrongNotification + whyWrong + "</span>").slideDown();
     $("#board").animate({ backgroundColor: boardColor});
     $("#board").animate({ backgroundColor: '#f1c40f'}, 1000);
 }
