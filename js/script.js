@@ -86,7 +86,7 @@ Check.life = 0;
 Check.removeStuff = function(what) {
     $(what).parent().parent().find(".pressenter").remove();
     $(what).parent().parent().find("br").remove();
-    $(what).parent().parent().find(".put").fadeOut();
+    $(what).parent().parent().find(".put").remove();
 };
 Check.radioInput = function(answer, nums, numq, ele) {
     Check.removeStuff(ele);
