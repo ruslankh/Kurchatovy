@@ -120,7 +120,8 @@ Check.textInput = function(form, nums, numq, answer) {
             Check.finalSteps(ele, answerinp, false, nums, numq);
         }
         if (answerinp.match(/резерфорд/)) {
-            condole.log('true')
+            console.log('true')
+            return false;
         }
     return false;
 };
